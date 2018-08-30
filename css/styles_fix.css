@@ -8,15 +8,12 @@
     justify-content: center;
 }
 #restaurants-list li {
-    width: 390px;
+    width: 250px;
 }
 .filter-options {
-    /* height: 150px; */
     padding: 10px;
-}
-
-#restaurants-list li {
-    /* width: 270px; */
+    width: inherit;
+    background-color: rgb(100, 50, 100);
 }
 
 @media (max-width: 600px) {
@@ -89,7 +86,7 @@
         width: calc(40% - 20px);
     }
     #reviews-container {
-        background-color: rgb(90, 67, 67);
+        background-color: rgb(90, 70, 70);
     }
     #reviews-list li {
         padding: 20px;
