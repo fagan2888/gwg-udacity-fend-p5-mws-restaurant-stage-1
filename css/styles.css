@@ -8,8 +8,8 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
-	margin: 0;
+  background-color: #fdfdfd;
+  margin: 0;
 	position:relative;
 }
 ul, li {
@@ -258,7 +258,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
