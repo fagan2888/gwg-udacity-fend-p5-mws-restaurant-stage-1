@@ -213,7 +213,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker
-    .register('/service-worker.js', 'https://ivanjanko.github.io/mws-restaurant-stage-1/service-worker.js')
+    .register('./service-worker.js', 'https://ivanjanko.github.io/mws-restaurant-stage-1/service-worker.js')
     .then(function() {console.log('ServiceWorker registration successful')})
     .catch(function(error) {console.log('ServiceWorker registration failed: ', error)});
   });
