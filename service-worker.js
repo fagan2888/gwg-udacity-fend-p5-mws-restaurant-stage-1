@@ -38,23 +38,23 @@ self.addEventListener('install', function(event) {
     );
 });
 
-// self.addEventListener('activate', function(event) {
-//     console.log('SW: Activated');
-//     // Remove unwanted caches
-//     event.waitUntil(
-//         caches.keys()
-//         .then(function(cacheNames) {
-//             return Promise.all(
-//                 cacheNames.map(function(cache) {
-//                     if (cache !== cacheName) {
-//                         console.log('SW: Old Cache Removed');
-//                         return caches.delete(cache);
-//                     }
-//                 })
-//             );
-//         })
-//     );
-// });
+self.addEventListener('activate', function(event) {
+    console.log('SW: Activated');
+    // Remove unwanted caches
+    event.waitUntil(
+        caches.keys()
+        .then(function(cacheNames) {
+            return Promise.all(
+                cacheNames.map(function(cache) {
+                    if (cache !== cacheName) {
+                        console.log('SW: Old Cache Removed');
+                        return caches.delete(cache);
+                    }
+                })
+            );
+        })
+    );
+});
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(
