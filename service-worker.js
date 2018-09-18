@@ -2,9 +2,9 @@
 
 const cacheName = 'v1';
 const toCache = [
-    '/',
+    './',
     './index.html',
-    '/restaurant.html',
+    './restaurant.html',
     './css/styles.css',
     './js/dbhelper.js',
     './js/main.js',
@@ -65,6 +65,8 @@ self.addEventListener('fetch', function(event) {
         )
     );
 });
+
+// Alternative fetch
 
 // self.addEventListener('fetch', function (event) {
 // 	event.respondWith(
