@@ -1,6 +1,32 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Keyboar Accessaability */
+
+.skip-map {
+    position:absolute;
+    left:-999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+.skip-map:focus-within {
+    /* make it visible */
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow:auto;
+    z-index:999;
+}
+#map .skip-map a {
+    width: 150px;
+    font-size:1.1em;
+}
+/* **************************** */
+
 #restaurants-list {
 	display:flex;
     flex-wrap: wrap;
@@ -69,7 +95,7 @@
 @media (min-width: 601px) {
     
     nav h1 a {
-        color: #f1ff77;
+        color: #ff7799;
         line-height: 80px;
     }
     #breadcrumb,

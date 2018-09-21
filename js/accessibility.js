@@ -19,4 +19,7 @@ window.onload = function(){
         console.log(rest);
     }
     // console.log(restaurantsList)
+    
+    /* 09-18-08 remove #map from tablist */
+    document.getElementById('map').setAttribute('tabindex', '-1');
 };
