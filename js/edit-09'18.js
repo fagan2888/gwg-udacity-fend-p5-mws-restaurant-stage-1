@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
     leafletTopRight.appendChild(zoomControl);
 
     // create skipMapElement
-    const skipMapElement = '<div class="leaflet-bar leaflet-control skip-map"><a class="leaflet-control-zoom-in" href="#neighborhoods-select" title="Zoom in" role="button" aria-label="Zoom in">skip the map</a></div>';
+    const skipMapElement = '<div class="leaflet-bar leaflet-control skip-map"><a class="leaflet-control-zoom-in" href="#neighborhoods-select" title="Zoom in" role="button" aria-label="Zoom in">press enter to skip the map</a></div>';
     
     // add skipMapElement to map
     const leafletTopLeft = document.querySelector('.leaflet-top.leaflet-left');
