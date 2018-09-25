@@ -25,6 +25,13 @@
     width: 250px;
     font-size:1.1em;
 }
+/* Color Contrast A11Y */
+#footer {
+    color: #bbb;
+}
+.leaflet-container a {
+    color: rgba(0, 115, 173, 1);
+}
 /* **************************** */
 
 #restaurants-list {

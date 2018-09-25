@@ -19,4 +19,23 @@ window.addEventListener('load', function() {
     leafletTopLeft.innerHTML = skipMapElement;
 
     // console.log(something);
+
+    //things to fix after running Lighthouse
+
+    /* Elements Use Attributes Correctly
+    These are opportunities to improve the configuration of your HTML elements.
+    1
+    Image elements do not have [alt] attributes
+    Elements Describe Contents Well
+    These are opportunities to make your content easier to understand for a user of assistive technology, like a screen reader.
+    1
+    Form elements do not have associated labels
+    Color Contrast Is Satisfactory
+    These are opportunities to improve the legibility of your content.
+    1
+    Background and foreground colors do not have a sufficient contrast ratio.
+
+    >> Page Specifies Valid Language
+    <html> element does not have a [lang] attribute */
+    document.querySelector('html').setAttribute('lang','en');
 });
