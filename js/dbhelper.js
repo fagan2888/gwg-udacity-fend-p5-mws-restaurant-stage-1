@@ -23,7 +23,6 @@ class DBHelper {
       if (xhr.status === 200) { // Got a success response from server!
         const json = JSON.parse(xhr.responseText);
         const restaurants = json.restaurants;
-        console.log(restaurants);
         callback(null, restaurants);
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
@@ -153,7 +152,6 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    console.log(`img/${restaurant.photograph}`);
     return (`img/${restaurant.photograph}`);
   }
 
