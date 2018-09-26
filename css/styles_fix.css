@@ -31,10 +31,7 @@
 }
 .leaflet-container a,
 #breadcrumb li a {
-    color: rgba(0, 115, 173, 1);
-}
-#restaurant-container h2{
-    color: #444;
+    color: rgba(0, 115, 165, 1);
 }
 /* **************************** */
 
