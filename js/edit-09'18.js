@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     const leafletTopLeft = document.querySelector('.leaflet-top.leaflet-left');
     leafletTopLeft.innerHTML = skipMapElement;
 
-    // console.log(something);
+    console.log(something);
 
     //things to fix after running Lighthouse
 
@@ -38,4 +38,5 @@ window.addEventListener('load', function() {
     >> Page Specifies Valid Language
     <html> element does not have a [lang] attribute */
     document.querySelector('html').setAttribute('lang','en');
+    document.querySelector('#neighborhoods-select').setAttribute('aria-label','All Neighborhoods');
 });
