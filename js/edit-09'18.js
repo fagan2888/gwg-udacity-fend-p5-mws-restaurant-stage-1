@@ -38,6 +38,8 @@ window.addEventListener('load', function() {
     >> Page Specifies Valid Language
     <html> element does not have a [lang] attribute */
     document.querySelector('html').setAttribute('lang','en');
+
+    // recomended fixes per axe audit
     document.querySelector('#neighborhoods-select').setAttribute('aria-label','All Neighborhoods');
     document.querySelector('#cuisines-select').setAttribute('aria-label','All Cuisines');
 });

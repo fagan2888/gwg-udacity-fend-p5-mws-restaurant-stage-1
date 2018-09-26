@@ -23,6 +23,7 @@ class DBHelper {
       if (xhr.status === 200) { // Got a success response from server!
         const json = JSON.parse(xhr.responseText);
         const restaurants = json.restaurants;
+        console.log(restaurants);
         callback(null, restaurants);
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
@@ -42,6 +43,7 @@ class DBHelper {
         callback(error, null);
       } else {
         const restaurant = restaurants.find(r => r.id == id);
+        console.log(restaurant);
         if (restaurant) { // Got the restaurant
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
@@ -151,7 +153,14 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
+    console.log(`img/${restaurant.photograph}`);
     return (`img/${restaurant.photograph}`);
+  }
+
+  // @ Restaurant image description, a11y fix
+  static imageDescriptionForRestaurant(restaurant) {
+    console.log(`img/${restaurant.photo_description}`);
+    return (`${restaurant.photo_description}`);
   }
 
   /**
