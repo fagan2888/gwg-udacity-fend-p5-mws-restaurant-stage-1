@@ -157,7 +157,6 @@ class DBHelper {
 
   // @ Restaurant image description, a11y fix
   static imageDescriptionForRestaurant(restaurant) {
-    console.log(`img/${restaurant.photo_description}`);
     return (`${restaurant.photo_description}`);
   }
 
