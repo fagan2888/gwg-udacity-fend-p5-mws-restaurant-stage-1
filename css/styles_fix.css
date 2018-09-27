@@ -25,7 +25,9 @@
     width: 250px;
     font-size:1.1em;
 }
+
 /* Color Contrast A11Y */
+
 #footer {
     color: #bbb;
 }
@@ -33,8 +35,23 @@
 #breadcrumb li a {
     color: rgba(0, 115, 165, 1);
 }
-/* **************************** */
 
+/***************************** 
+    initial style settup
+*******************************/
+
+body {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* position: absolute; */
+}
+.inside header {
+    position: absolute;
+}
+#breadcrumb {
+    text-align: center;
+}
 #restaurants-list {
 	display:flex;
     flex-wrap: wrap;
@@ -44,14 +61,15 @@
     min-height: auto;
 }
 #restaurants-list li {
-    width: 300px;
+    width: 250px;
     padding: 15px;
+    margin: 10px 0px;
     text-align: center;
     border-radius:4px;
 }
 #restaurants-list li h2,
 #restaurant-name {
-    background-color:midnightblue;
+    background-color:rgb(71, 112, 25);
     color: #fff;
     font-family: Arial,sans-serif;
     font-size: 12pt;
@@ -89,43 +107,55 @@
     margin: 15px 0px 0px 15px;
     border-radius: 3px;
 }
-@media (max-width: 374px) {
-    
-    #restaurants-list li {
-        width: 250px;
-        margin: 10px 0px;
-    }
+nav h1 a {
+    line-height: 80px;
+    font-size: 12pt;
+    letter-spacing: 7px;
 }
-@media (max-width: 599px) {
-    
+#breadcrumb {
+    width: calc(100% - 80px);
+}
+#maincontent{
+    display: grid;
+}
+#restaurant-container {
+    width: inherit;
+    order:  1;
+}
+#restaurant-img,
+#restaurant-cuisine {
+    width: 100%;
+}
+#reviews-container {
+    background-color: #444;
+    width: inherit;
+    padding: 30px 40px;
+    order:  3;
+}
+#reviews-list li {
+    padding: 20px;
+    width: inherit;
+    border: 0px;
+}
+.inside #footer {
+    width: inherit;
+    margin-top: -1px;
+    position: relative;
+}
+
+/********************************************
+    style changes at 375px, 600px and 950
+*********************************************/
+
+@media (min-width: 375px) {
+
     #restaurants-list li {
+        width: 300px;
         margin: 15px 0px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 599px) {
 
-    .inside header {
-        position: absolute;
-    }
-    nav h1 a {
-        line-height: 80px;
-        font-size: 12pt;
-        letter-spacing: 7px;
-    }
-    #breadcrumb {
-        width: calc(100% - 80px);
-    }
-    #maincontent{
-        display: grid;
-    }
-    #restaurant-container {
-        width: inherit;
-        order:  1;
-    }
-    #restaurant-img,
-    #restaurant-cuisine {
-        width: 100%;
-    }
     .inside #map-container {
         width: inherit;
         height: 330px;
@@ -134,41 +164,42 @@
         margin-bottom: 95px;
         order:  2;
     }
-    #reviews-container {
-        background-color: #444;
-        width: inherit;
-        padding: 30px 40px;
-        order:  3;
-    }
-    #reviews-list li {
-        padding: 20px;
-        width: inherit;
-        border: 0px;
-    }
-    .inside #footer {
-        width: inherit;
-        margin-top: -1px;
-        position: relative;
-    }
 }
-@media (min-width: 601px) {
+@media (min-width: 600px) {
     
     nav h1 a {
-
         line-height: 80px;
     }
-    #breadcrumb,
+    .inside header {
+        position: sticky;
+    }
+    /* #restaurant-container {
+        order:  1;
+    }
+    .inside #map-container {
+        order:  2;
+    }
+    #reviews-container {
+        order:  3;
+    } */
+    #restaurants-list li {
+        margin: 15px 10px;
+    }
+    #restaurant-container {
+        padding: 30px 40px 30px;
+    }
     #restaurant-container,
     #reviews-container {
-        width: calc(60% - 60px);
+        width: calc(60% - 80px);
+        /* width: 60%; */
     }
     #restaurant-img,
     #restaurant-cuisine {
         width: 100%;
     }
     .inside #map-container {
-        margin-left: 20px;
-        width: calc(40% - 20px);
+        top: 0px;
+        width: 40%;
     }
     #reviews-container {
         background-color: rgb(90, 70, 70);
@@ -179,27 +210,25 @@
         border: 0px;
     }
     .inside #footer {
-        position: fixed;
+        position: sticky;
         width: 100%;
+        padding: 25px 0;
     }
 }
-@media (min-width: 951px) {
-    /* this is sposed to stop <div> from growing after 1400px but it's not working for detailes page */
-    body {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    nav h1 a {
-    }
-    #breadcrumb,
+@media (min-width: 1200px) {
+    
     #restaurant-container,
     #reviews-container {
-        width: calc(50% - 70px);
+        width: calc(55% - 80px);
     }
+    
     .inside #map-container {
-        margin-left: 10px;
-        margin-right: 40px;
-        width: calc(50% - 50px);
+        margin-left: 55%;
+        position: sticky;
+    }
+    .inside #map {
+        position: fixed;
+        max-width: 500px;
+        height: calc(100% - 196px);
     }
 }
