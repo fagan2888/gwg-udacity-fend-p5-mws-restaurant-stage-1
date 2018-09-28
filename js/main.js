@@ -211,7 +211,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 console.log('main.js loaded');
-console.log('serviceWorker' in navigator);
+
 // @ Register Service Worker
 if ('serviceWorker' in navigator) {
   console.log('service worker present')

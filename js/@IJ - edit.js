@@ -1,17 +1,14 @@
 /*jshint esversion: 6 */
-console.log(document.querySelector('#map'));
-document.addEventListener("DOMContentLoaded", function() {
-    console.log(document.readyState);
+
+window.addEventListener('load', function() {
+    
     // move the control container up in the DOM
     // const controlContainer = document.querySelector('.leaflet-control-container');
     // document.getElementById('map').insertAdjacentElement('afterbegin', controlContainer);
-    console.log(document.querySelector('#map'));
+    
     // move zoom control to right
     const zoomControl = document.querySelector('.leaflet-control-zoom');
-    console.log(zoomControl);
-    console.log(document.querySelector('.leaflet-control-container'));
     const leafletTopRight = document.querySelector('.leaflet-top.leaflet-right');
-    console.log(leafletTopRight);
     leafletTopRight.appendChild(zoomControl);
 
     // create skipMapElement
