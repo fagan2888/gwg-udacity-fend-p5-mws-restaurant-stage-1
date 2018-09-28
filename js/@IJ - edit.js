@@ -1,14 +1,17 @@
 /*jshint esversion: 6 */
-
-window.addEventListener('load', function() {
-    
+console.log(document.querySelector('#map'));
+document.addEventListener("DOMContentLoaded", function() {
+    console.log(document.readyState);
     // move the control container up in the DOM
-    const controlContainer = document.querySelector('.leaflet-control-container');
-    document.getElementById('map').insertAdjacentElement('afterbegin', controlContainer);
-    
+    // const controlContainer = document.querySelector('.leaflet-control-container');
+    // document.getElementById('map').insertAdjacentElement('afterbegin', controlContainer);
+    console.log(document.querySelector('#map'));
     // move zoom control to right
     const zoomControl = document.querySelector('.leaflet-control-zoom');
+    console.log(zoomControl);
+    console.log(document.querySelector('.leaflet-control-container'));
     const leafletTopRight = document.querySelector('.leaflet-top.leaflet-right');
+    console.log(leafletTopRight);
     leafletTopRight.appendChild(zoomControl);
 
     // create skipMapElement
@@ -28,7 +31,7 @@ window.addEventListener('load', function() {
         document.querySelector('#neighborhoods-select').setAttribute('aria-label','All Neighborhoods');
         document.querySelector('#cuisines-select').setAttribute('aria-label','All Cuisines');
     } else {
-        
+
         //apply the approprite url for the skiplink
         document.querySelector('.skip-map').firstElementChild.href = '#reviews-container';
     }

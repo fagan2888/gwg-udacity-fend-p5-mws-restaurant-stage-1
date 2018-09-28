@@ -95,7 +95,7 @@ body {
 #restaurants-list li a:hover {
     background-color: gray;
     color: #fff;
-    border:0px solid #dadada;
+    border:2px solid gray;
 }
 .filter-options {
     height: auto;

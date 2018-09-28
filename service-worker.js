@@ -6,9 +6,12 @@ const toCache = [
     './index.html',
     './restaurant.html',
     './css/styles.css',
+    './css/styles_fix.css',
     './js/dbhelper.js',
     './js/main.js',
     './js/restaurant_info.js',
+    './js/accessibility.js',
+    './js/@IJ - edit.js',
     './data/restaurants.json',
     './img/1.jpg',
     './img/2.jpg',
@@ -56,30 +59,18 @@ self.addEventListener('activate', function(event) {
     );
 });
 
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request)
-            .then(function(response) {
-            return response || fetch(event.request);
-            }
-        )
-    );
+self.addEventListener('fetch', function (event) {
+	event.respondWith(
+		caches.open(cacheName)
+		.then(function (cache) {
+			return cache.match(event.request)
+				.then(function (response) {
+					return response || fetch(event.request)
+						.then(function (response) {
+							cache.put(event.request, response.clone());
+							return response;
+						});
+				});
+		})
+	);
 });
-
-// Alternative fetch
-
-// self.addEventListener('fetch', function (event) {
-// 	event.respondWith(
-// 		caches.open(cacheName)
-// 		.then(function (cache) {
-// 			return cache.match(event.request)
-// 				.then(function (response) {
-// 					return response || fetch(event.request)
-// 						.then(function (response) {
-// 							cache.put(event.request, response.clone());
-// 							return response;
-// 						});
-// 				});
-// 		})
-// 	);
-// });
