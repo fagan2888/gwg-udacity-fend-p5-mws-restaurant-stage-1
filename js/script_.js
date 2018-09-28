@@ -2,7 +2,7 @@
 
 window.addEventListener('load', function() {
 
-    console.log('>>> _script <<< loaded');
+    console.log('>>> script_ <<< loaded');
 
     /***********************
         index.html edits
@@ -18,9 +18,9 @@ window.addEventListener('load', function() {
         target.insertAdjacentHTML('afterbegin', item);
     });
     
-    //append _styles at the end of the head
-    document.querySelector('title').insertAdjacentHTML('beforebegin', '<link rel="stylesheet" href="css/_styles.css">');
-    console.log('>>> _styles <<< loaded');
+    //append styles_ at the end of the head
+    document.querySelector('title').insertAdjacentHTML('beforebegin', '<link rel="stylesheet" href="css/styles_.css">');
+    console.log('>>> styles_ <<< loaded');
 
     /******************************
         restaurant.html edits
