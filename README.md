@@ -14,9 +14,9 @@ recomended edits after first submision:
         <p>https://raw.githubusercontent.com/ivanjanko/mws-restaurant-stage-1/master/Screen%20Shot%202018-09-29%20at%2012.59.12%20PM.png</p>
     </details>
 * breadcrumb element is non-semantic and so requires a aria label
-    * solution in script_.js line 37
+    * solution in script_.js line 82
 * map element is non-semantic and so requires a aria role
-    * solution in script_.js line 40
+    * solution in script_.js line 31
 ---
 **Quick overview of changes done to the starter code:** 
 * root files

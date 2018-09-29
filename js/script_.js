@@ -23,7 +23,16 @@ window.onload = function() {
 
     console.log('loaded >>> styles_.css');
 
-    
+    /******************************
+        some aria implementation
+    *******************************/
+
+    // aplying aria role to element with map id
+    document.querySelector('#map').setAttribute('role','application');
+
+    // <html> element does not have a [lang] attribute 
+    document.querySelector('html').setAttribute('lang','en');
+
     // the code was running before all elements where in DOM so have to loop this code
     doesElemntExist = setInterval(function() {
         if (document.contains(document.querySelector('.leaflet-control-container'))) {
@@ -31,25 +40,12 @@ window.onload = function() {
             clearInterval(doesElemntExist);
 
             /******************************
-                a11y
+                skip elemnet setup
             *******************************/
-
-            // aplying aria label to element with breadcrumb id
-            document.querySelector('#breadcrumb').setAttribute('aria-label', 'Breadcrumb');
-
-            // aplying aria role to element with map id
-            document.querySelector('#map').setAttribute('role','application');
-
-            // <html> element does not have a [lang] attribute 
-            document.querySelector('html').setAttribute('lang','en');
 
             // move the control container up in the DOM
             const controlContainer = document.querySelector('.leaflet-control-container');
             document.querySelector('#map').insertAdjacentElement('afterbegin', controlContainer);
-
-            /*************************
-                skip element setup
-            **************************/
 
             // move zoom control to right
             const zoomControl = document.querySelector('.leaflet-control-zoom');
@@ -78,6 +74,13 @@ window.onload = function() {
                 document.querySelector('#cuisines-select').setAttribute('aria-label','All Cuisines');
             } else {
                 
+                /***********************************
+                    some more aria implementation
+                ************************************/
+
+                // aplying aria label to element with breadcrumb id
+                document.querySelector('#breadcrumb').setAttribute('aria-label', 'Breadcrumb');
+    
                 // switched from h1 to h2 to compy with a11y recomendation of h1 per page
                 const h1Element = document.querySelector('#restaurant-name');
                 const newEl = document.createElement('h2');
