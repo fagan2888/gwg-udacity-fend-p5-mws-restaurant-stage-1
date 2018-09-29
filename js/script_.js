@@ -92,7 +92,7 @@ window.onload = function() {
                 console.log("Houston we have a problem")
             }
         }
-    },1000);
+    },500);
     
     /* 
     things to fix in index.html after running Lighthouse
