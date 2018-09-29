@@ -64,7 +64,7 @@ window.onload = function() {
             document.getElementById('map').setAttribute('tabindex', '-1');
 
             //check on which page we are on and run code specific for that page
-            if (!document.URL.includes('restaurant')) {
+            if (!document.URL.includes('restaurant.html')) {
 
                 //apply the approprite url for the skiplink
                 document.querySelector('.skip-map').firstElementChild.href = '#neighborhoods-select';
@@ -72,7 +72,7 @@ window.onload = function() {
                 // a11y, supply missing labels
                 document.querySelector('#neighborhoods-select').setAttribute('aria-label','All Neighborhoods');
                 document.querySelector('#cuisines-select').setAttribute('aria-label','All Cuisines');
-            } else if (document.URL.includes('restaurant')) {
+            } else if (document.URL.includes('restaurant.html')) {
                 
                 /***********************************
                     some more aria implementation
