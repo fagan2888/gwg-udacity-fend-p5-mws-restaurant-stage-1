@@ -23,29 +23,33 @@ window.onload = function() {
 
     console.log('loaded >>> styles_.css');
 
-    /******************************
-        a11y
-    *******************************/
-
-    // aplying aria label to element with breadcrumb id
-    document.querySelector('#breadcrumb').setAttribute('aria-label', 'Breadcrumb');
-
-    // aplying aria role to element with map id
-    document.querySelector('#map').setAttribute('role','application');
-
-    // <html> element does not have a [lang] attribute 
-    document.querySelector('html').setAttribute('lang','en');
-
+    
     // the code was running before all elements where in DOM so have to loop this code
     doesElemntExist = setInterval(function() {
         if (document.contains(document.querySelector('.leaflet-control-container'))) {
             
             clearInterval(doesElemntExist);
 
+            /******************************
+                a11y
+            *******************************/
+
+            // aplying aria label to element with breadcrumb id
+            document.querySelector('#breadcrumb').setAttribute('aria-label', 'Breadcrumb');
+
+            // aplying aria role to element with map id
+            document.querySelector('#map').setAttribute('role','application');
+
+            // <html> element does not have a [lang] attribute 
+            document.querySelector('html').setAttribute('lang','en');
+
             // move the control container up in the DOM
             const controlContainer = document.querySelector('.leaflet-control-container');
-            
             document.querySelector('#map').insertAdjacentElement('afterbegin', controlContainer);
+
+            /*************************
+                skip element setup
+            **************************/
 
             // move zoom control to right
             const zoomControl = document.querySelector('.leaflet-control-zoom');

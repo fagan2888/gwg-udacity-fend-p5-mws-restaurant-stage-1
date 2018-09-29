@@ -14,11 +14,11 @@ recomended edits after first submision:
         <p>https://raw.githubusercontent.com/ivanjanko/mws-restaurant-stage-1/master/Screen%20Shot%202018-09-29%20at%2012.59.12%20PM.png</p>
     </details>
 * breadcrumb element is non-semantic and so requires a aria label
-    * solution in script_.js line 31
+    * solution in script_.js line 37
 * map element is non-semantic and so requires a aria role
-    * solution in script_.js line 34
+    * solution in script_.js line 40
 ---
-**Quick overview of changes done to the starter code:**
+**Quick overview of changes done to the starter code:** 
 * root files
   * index.html & restaurant.html >> a tag href attibute changed from '/' to './' and added link to script_.js
   * created service-worker.js >> for offline loading
