@@ -24,14 +24,14 @@ const toCache = [
     './img/10.jpg'
 ];
 
-
 self.addEventListener('install', function(event) {
+    console.log('installing >>> SW');
     event.waitUntil(
         caches.open(cacheName)
         .then(function(cache) {
             return cache.addAll(toCache)
             .then(function() {
-                console.log('Files Cashed');
+                console.log('cashed >>> files');
             });
         })
         .catch(function(error) {
@@ -41,7 +41,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-    console.log('SW: Activated');
+    console.log('activated >>> new SW');
     // Remove unwanted caches
     event.waitUntil(
         caches.keys()
@@ -49,7 +49,7 @@ self.addEventListener('activate', function(event) {
             return Promise.all(
                 cacheNames.map(function(cache) {
                     if (cache !== cacheName) {
-                        console.log('SW: Old Cache Removed');
+                        console.log('old cache removed >>> SW');
                         return caches.delete(cache);
                     }
                 })
