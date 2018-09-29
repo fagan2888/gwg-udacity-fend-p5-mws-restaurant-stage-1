@@ -2,6 +2,17 @@
 ---
 Site is published at https://ivanjanko.github.io/mws-restaurant-stage-1/index.html
 
+update 09-29-18
+
+recomended edits after first submision:
+* to add vieport meta tag
+    * meta tag already present it's injected in both html files by the script_.js line 11 to 18
+    ![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+* breadcrumb element is non-semantic and so requires a aria label
+    * solution in script_.js line 
+* map element is non-semantic and so requires a aria role
+    * solution in script_.js line 
+
 Quick overview of changes done to the starter code:
 * root files
   * index.html & restaurant.html >> a tag href attibute changed from '/' to './' and added link to script_.js

@@ -27,6 +27,12 @@ window.onload = function() {
         a11y
     *******************************/
 
+    // aplying aria label to element with breadcrumb id
+    document.querySelector('#breadcrumb').setAttribute('aria-label', 'Breadcrumb');
+
+    // aplying aria role to element with map id
+    document.querySelector('#map').setAttribute('role','application');
+
     // <html> element does not have a [lang] attribute 
     document.querySelector('html').setAttribute('lang','en');
 
