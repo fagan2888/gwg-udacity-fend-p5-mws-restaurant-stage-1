@@ -72,7 +72,7 @@ window.onload = function() {
                 // a11y, supply missing labels
                 document.querySelector('#neighborhoods-select').setAttribute('aria-label','All Neighborhoods');
                 document.querySelector('#cuisines-select').setAttribute('aria-label','All Cuisines');
-            } else {
+            } else if (document.URL.includes('restaurant')) {
                 
                 /***********************************
                     some more aria implementation
@@ -88,6 +88,8 @@ window.onload = function() {
                 newEl.id = 'restaurant-name';
                 newEl.innerHTML = h1Element.innerHTML;
                 h1Element.parentNode.replaceChild(newEl, h1Element);
+            } else {
+                console.log("Houston we have a problem")
             }
         }
     },1000);
