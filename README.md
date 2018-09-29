@@ -9,6 +9,10 @@ recomended edits after first submision:
 * to add vieport meta tag
     * meta tag already present, it's injected in both html files by the script_.js line 11 to 18
     ![picture alt](https://github.com/ivanjanko/mws-restaurant-stage-1/blob/master/Screen%20Shot%202018-09-29%20at%201.22.05%20PM.png)
+    <details>
+           <summary>Sreenshot 2</summary>
+           https://github.com/ivanjanko/mws-restaurant-stage-1/blob/master/Screen%20Shot%202018-09-29%20at%2012.59.12%20PM.png
+         </details>
 * breadcrumb element is non-semantic and so requires a aria label
     * solution in script_.js line 31
 * map element is non-semantic and so requires a aria role
