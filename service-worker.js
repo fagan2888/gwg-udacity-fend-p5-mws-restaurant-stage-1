@@ -4,7 +4,7 @@ const cacheName = 'v1';
 const toCache = [
     './',
     './index.html',
-    './restaurant.html',
+    './restaurant.html?id=1',
     './css/styles.css',
     './css/styles_.css',
     './js/dbhelper.js',

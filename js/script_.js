@@ -73,6 +73,7 @@ window.onload = function() {
                 const newEl = document.createElement('h2');
         
                 newEl.id = 'restaurant-name';
+                newEl.innerHTML = h1Element.innerHTML;
                 h1Element.parentNode.replaceChild(newEl, h1Element);
             }
         }
