@@ -1,6 +1,6 @@
 # Mobile Web Specialist Certification Course
 ---
-Site is published at https://ivanjankovic.github.io/mws-restaurant-stage-1/index.html
+Site is published at https://ivanjankovic.github.io/gwg-udacity-fend-p5-mws-restaurant-stage-1/
 
 ---
 **Quick overview of changes done to the starter code:** 
