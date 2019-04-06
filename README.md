@@ -1,8 +1,7 @@
 ## Restaurant Reviews App: Stage 1
----
+
 Site is published at https://ivanjankovic.github.io/gwg-udacity-fend-p5-mws-restaurant-stage-1/
 
----
 **Quick overview of changes done to the starter code:** 
 * root files
   * index.html & restaurant.html >> a tag href attibute changed from '/' to './' and added link to script_.js
@@ -18,5 +17,3 @@ Site is published at https://ivanjankovic.github.io/gwg-udacity-fend-p5-mws-rest
 
 * css folder files
   * created styles_.js >> 95% of work is in this file and script_.css
-
----
