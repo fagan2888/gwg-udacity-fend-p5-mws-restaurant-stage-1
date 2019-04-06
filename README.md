@@ -1,4 +1,4 @@
-# Mobile Web Specialist Certification Course
+## Restaurant Reviews App: Stage 1
 ---
 Site is published at https://ivanjankovic.github.io/gwg-udacity-fend-p5-mws-restaurant-stage-1/
 
